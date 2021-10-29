@@ -1,8 +1,14 @@
+<a href="{% url 'create' %}">
+  <button type="button">新規作成</button>
+</a>
+
 {% for item in object_list %}
 
 <ul> 
   <li>日付：{{ item.date }}</li>
   <li>タイトル：{{ item.title }}</li>
 </ul>
-
+<a href="{%url 'detail' item.pk %}">
+  <button type="button">詳細</button>
+</a>
 {% endfor %}
